@@ -1,0 +1,33 @@
+/** RESTART.CSS
+  * an opinionated css reset
+  **/
+
+:root {
+  --system-font:
+    system-ui,            /* detect system font automatically */
+    -apple-system,        /* Safari (Mac OS X and iOS) and Older Mac OS X */
+    BlinkMacSystemFont,   /* Chrome<56 (Mac OS X) */
+    "Segoe UI",           /* Windows and Windows Phone */
+    "Roboto",             /* Android and Chrome OS */
+    "Oxygen",             /* KDE    - Linux environment */
+    "Ubuntu",             /* Ubuntu - Linux distribution */
+    "Cantarell",          /* GNOME  - Linux environment */
+    "Fira Sans",          /* Firefox */
+    "Droid Sans",         /* Older Android */
+    "Helvetica Neue",     /* Older Mac OS X */
+    sans-serif,
+    "Apple Color Emoji",  /* Mac OS X Emoji fallback */
+    "Segoe UI Emoji", "Segoe UI Symbol";  /* Windows Emoji fallback */
+}
+
+body {
+  font-family: var(--system-font); /* font defaults to system font */
+  margin: 0; /* overwrite default margin */
+  height: 100vh; /* body should match the height of the viewport */
+}
+
+/* HMTL5 Semantic Elements */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, nav, section {
+  display: block;
+}
