@@ -9,6 +9,7 @@
   "author": "Alexander Rice <alexanderrice97@gmail.com>",
   "license": "ISC",
   "devDependencies": {
+    "htmlhint": "^0.10.1",
     "stylelint-config-standard": "^18.2.0"
   },
   "dependencies": {
