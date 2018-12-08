@@ -1,40 +1,40 @@
-/* SYSTEM FONTS
-   system font stacks default to system's native fonts
-   this results in quick and pretty defaults.
+// SYSTEM FONTS
+// system font stacks default to system's native fonts
+// this results in quick and pretty defaults.
+//
+// SYSTEM-UI SANS-SERIF FONT STACK
+// system-ui,              ** detect system font automatically
+// -apple-system,          ** Safari (Mac OS X and iOS) and Older Mac OS X
+// BlinkMacSystemFont,     ** Chrome<56 (Mac OS X)
+// "Segoe UI",             ** Windows and Windows Phone
+// "Roboto",               ** Android and Chrome OS
+// "Oxygen",               ** KDE    - Linux environment
+// "Ubuntu",               ** Ubuntu - Linux distribution
+// "Cantarell",            ** GNOME  - Linux environment
+// "Fira Sans",            ** Firefox
+// "Droid Sans",           ** Older Android
+// "Helvetica Neue",       ** Older Mac OS X
+// sans-serif,
+// "Apple Color Emoji",                  ** Mac OS X Emoji fallback
+// "Segoe UI Emoji", "Segoe UI Symbol";  ** Windows Emoji fallback
+//
+// MONOSPACE SYSTEM FONT STACK
+// SFMono-Regular,         ** Mac OS X and iOS
+// Menlo,                  ** Older Mac OS X
+// Monaco,                 ** Older Mac OS X
+// Consolas,               ** Windows
+// "Liberation Mono",      ** Older Windows
+// "Courier New", Courier, ** Older Windows
+// monospace;
+// 
 
-  SYSTEM-UI SANS-SERIF FONT STACK
-    system-ui,              ** detect system font automatically
-    -apple-system,          ** Safari (Mac OS X and iOS) and Older Mac OS X
-    BlinkMacSystemFont,     ** Chrome<56 (Mac OS X)
-    "Segoe UI",             ** Windows and Windows Phone
-    "Roboto",               ** Android and Chrome OS
-    "Oxygen",               ** KDE    - Linux environment
-    "Ubuntu",               ** Ubuntu - Linux distribution
-    "Cantarell",            ** GNOME  - Linux environment
-    "Fira Sans",            ** Firefox
-    "Droid Sans",           ** Older Android
-    "Helvetica Neue",       ** Older Mac OS X
-    sans-serif,
-    "Apple Color Emoji",                  ** Mac OS X Emoji fallback
-    "Segoe UI Emoji", "Segoe UI Symbol";  ** Windows Emoji fallback
-
-  MONOSPACE SYSTEM FONT STACK
-    SFMono-Regular,         ** Mac OS X and iOS
-    Menlo,                  ** Older Mac OS X
-    Monaco,                 ** Older Mac OS X
-    Consolas,               ** Windows
-    "Liberation Mono",      ** Older Windows
-    "Courier New", Courier, ** Older Windows
-    monospace;
-*/
-
-/* sans-serif System Font */
+// sans-serif System Font
 --system-sans-serif = system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
 
-/* monospace System Font */
+// monospace System Font
 --system-monospace = SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Courier, monospace
 
-/* Type Ratios ** http://type-scale.com/ Scale: 1.200 - Minor Third */
+// Type Ratios - http://type-scale.com/ Scale: 1.200 - Minor Third 
 --typesize-1 = 2.074rem
 --typesize-2 = 1.728rem
 --typesize-3 = 1.440rem
@@ -47,24 +47,22 @@
 body
   background-color: #fff
   font-family: --system-sans-serif
-  font-size: 1rem /* preserve users' custom browser settings */
+  font-size: 1rem // preserve users' custom browser settings
   margin: 0
-  height: 100vh /* body height should match the viewport */
+  height: 100vh // body height should match the viewport
 
-/* HMTL5 SEMANTIC ELEMENTS
-   main is the only HTML5 Semantic Element that needs support in IE (9-11)
-   https://caniuse.com/#feat=html5semantic
-*/
+// HMTL5 SEMANTIC ELEMENTS
+// main is the only HTML5 Semantic Element that needs support in IE (9-11)
+// https://caniuse.com/#feat=html5semantic
 main
   display: block
 
-/* RESTYLE COMPONENTS
-   avoid collapsing margins by setting all margins as margin-bottom
-   font-sizes should not be less than 1rem;
-
-   A Visual Type Scale: http://type-scale.com/
-   http://type-scale.com/
-*/
+// RESTYLE COMPONENTS
+// avoid collapsing margins by setting all margins as margin-bottom
+// font-sizes should not be less than 1rem;
+//
+// A Visual Type Scale: http://type-scale.com/
+// http://type-scale.com/
 
 h1, h2, h3, h4, h5, h6
   margin-top: 0
