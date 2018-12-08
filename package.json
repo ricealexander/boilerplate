@@ -10,5 +10,6 @@
   "license": "ISC",
   "devDependencies": {
     "htmlhint": "^0.10.1"
-  }
+  },
+  "dependencies": {}
 }
