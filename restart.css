@@ -22,7 +22,9 @@
 */
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";  /* system font stack */
+  background-color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";  /* system font stack (Reboot*) */
+  font-size: 1rem; /* user-defined font-size || browser default (Reboot) */
   margin: 0; /* override default margin */
   height: 100vh; /* body should match height of the viewport */
 }
@@ -33,4 +35,33 @@ body {
 */
 main {
   display: block;
+}
+
+/* RESTYLE COMPONENTS
+   avoid collapsing margins by setting all margins as margin-bottom
+   font-sizes should not be less than 1rem;
+*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h4, h5, h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+ul ul {
+  margin-bottom: 0;
 }
