@@ -7,7 +7,7 @@ This will be an opinionated CSS reset.
    Although this keeps Meyer's stylesheet concise, those styles are wasted.
 
 2. Reset properties should not need to be overridden
-   One complaint about reset stylesheets is that they override default styles and in many cases are then overridden themselves. A common reset is to set the margin and padding of all elements to zero: `* {margin: 0; padding: 0;}`.
+   One criticism of reset stylesheets is that they override default styles and in many cases are then overridden themselves. A common reset is to set the margin and padding of all elements to zero: `* {margin: 0; padding: 0;}`.
    This approach can be problematic with buttons and form elements, and if it's followed with new defaults for paragraph tags or headers, then the reset styles have undermined themselves.
 
 3. Reset utilities are allowed for optional resets
