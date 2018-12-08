@@ -1,0 +1,17 @@
+{
+  "name": "opinionated_reset",
+  "version": "1.0.0",
+  "description": "An intuitive CSS Resetter",
+  "main": "restart.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexander Rice <alexanderrice97@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "stylelint-config-standard": "^18.2.0"
+  },
+  "dependencies": {
+    "stylelint": "^9.8.0"
+  }
+}
