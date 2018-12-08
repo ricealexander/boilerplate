@@ -28,6 +28,16 @@
     "Liberation Mono",      /* Older Windows */
     "Courier New", Courier, /* Older Windows */
     monospace;
+
+  /* http://type-scale.com/ Scale: 1.200 - Minor Third */
+  --t-size-1: 2.074rem;
+  --t-size-2: 1.728rem;
+  --t-size-3: 1.44rem;
+  --t-size-4: 1.2rem;
+  --t-size-5: 1rem;
+  --t-size-6: 0.833rem;
+  --t-size-7: 0.694rem;
+  --t-size-8: 0.579rem;
 }
 
 body {
@@ -51,7 +61,7 @@ main {
    font-sizes should not be less than 1rem;
 
    A Visual Type Scale: http://type-scale.com/
-   Scale: 1.200 - Minor Third
+   http://type-scale.com/
 */
 
 h1, h2, h3, h4, h5, h6 {
@@ -61,19 +71,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.074rem;
+  font-size: var(--t-size-1);
 }
 
 h2 {
-  font-size: 1.728rem;
+  font-size: var(--t-size-2);
 }
 
 h3 {
-  font-size: 1.44rem;
+  font-size: var(--t-size-3);
 }
 
 h4 {
-  font-size: 1.2rem;
+  font-size: var(--t-size-4);
 }
 
 h5, h6 {
@@ -96,7 +106,7 @@ ul ul {
 }
 
 dt {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 dd {
@@ -107,10 +117,15 @@ dd {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  margin-bottom: 0.5rem;
 }
 
-td {
-  padding-right: 1rem;
+th {
+  font-weight: 700;
+}
+
+th, td {
+  padding-right: 0.5rem;
 }
 
 pre {

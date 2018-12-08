@@ -4,12 +4,14 @@
   <title>Some Assorted HTML</title>
   <link rel="stylesheet" href="restart.css">
   <style>
-body {
-  margin: 20px;
+.wrapper {
+  box-sizing: border-box;
+  padding: 4rem;
 }
   </style>
 </head>
 <body>
+  <div class="wrapper">
 
   <p>Paragraph Here</p>
   <p>Paragraph Here</p>
@@ -85,6 +87,14 @@ td {
 <p>Paragraph Here</p>
 
 <table>
+  <thead>
+    <tr>
+      <th>table-cell</th>
+      <th>table-cell</th>
+      <th>table-cell</th>
+    </tr>
+  </thead>
+  <tbody>
     <tr>
       <td>table-cell</td>
       <td>table-cell</td>
@@ -105,37 +115,18 @@ td {
       <td>table-cell</td>
       <td>table-cell</td>
     </tr>
+  </tbody>
+  <tfoot>
     <tr>
       <td>table-cell</td>
       <td>table-cell</td>
       <td>table-cell</td>
     </tr>
-    <tr>
-      <td>table-cell</td>
-      <td>table-cell</td>
-      <td>table-cell</td>
-    </tr>
-    <tr>
-      <td>table-cell</td>
-      <td>table-cell</td>
-      <td>table-cell</td>
-    </tr>
-    <tr>
-      <td>table-cell</td>
-      <td>table-cell</td>
-      <td>table-cell</td>
-    </tr>
-    <tr>
-      <td>table-cell</td>
-      <td>table-cell</td>
-      <td>table-cell</td>
-    </tr>
-    <tr>
-      <td>table-cell</td>
-      <td>table-cell</td>
-      <td>table-cell</td>
-    </tr>
-    </table>
+  </tfoot>
+</table>
 
+<p>Paragraph Here</p>
+
+</div>
 </body>
 </html>
