@@ -1,5 +1,6 @@
 # opinionated_reset
 This will be an opinionated CSS reset.
+Browser Support: all CSS should be supported on IE10+ and on all modern browsers
 
 #### CSS Philosophy
 1. Every property must give value
