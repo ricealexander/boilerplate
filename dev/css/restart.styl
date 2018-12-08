@@ -1,24 +1,31 @@
 /* SYSTEM FONTS
    system font stacks default to system's native fonts
    this results in quick and pretty defaults.
+
+   SYSTEM-UI SANS-SERIF FONT STACK
+     system-ui,             ** detect system font automatically
+     -apple-system,         ** Safari (Mac OS X and iOS) and Older Mac OS X
+     BlinkMacSystemFont,    ** Chrome<56 (Mac OS X)
+     "Segoe UI",            ** Windows and Windows Phone
+     "Roboto",              ** Android and Chrome OS
+     "Oxygen",              ** KDE    - Linux environment
+     "Ubuntu",              ** Ubuntu - Linux distribution
+     "Cantarell",           ** GNOME  - Linux environment
+     "Fira Sans",           ** Firefox
+     "Droid Sans",          ** Older Android 
+     "Helvetica Neue",      ** Older Mac OS X
+     sans-serif,
+     "Apple Color Emoji",                  ** Mac OS X Emoji fallback
+     "Segoe UI Emoji", "Segoe UI Symbol";  ** Windows Emoji fallback
 */
 
+/* FONT STACKS */
+system-sans-serif = system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+
 :root {
-  --f-system-sans:
-    system-ui,              /* detect system font automatically */
-    -apple-system,          /* Safari (Mac OS X and iOS) and Older Mac OS X */
-    BlinkMacSystemFont,     /* Chrome<56 (Mac OS X) */
-    "Segoe UI",             /* Windows and Windows Phone */
-    "Roboto",               /* Android and Chrome OS */
-    "Oxygen",               /* KDE    - Linux environment */
-    "Ubuntu",               /* Ubuntu - Linux distribution */
-    "Cantarell",            /* GNOME  - Linux environment */
-    "Fira Sans",            /* Firefox */
-    "Droid Sans",           /* Older Android */
-    "Helvetica Neue",       /* Older Mac OS X */
-    sans-serif,
-    "Apple Color Emoji",                  /* Mac OS X Emoji fallback */
-    "Segoe UI Emoji", "Segoe UI Symbol";  /* Windows Emoji fallback */
+  --f-system-sans: system-sans-serif;
+
 
   --f-system-mono:
     SFMono-Regular,         /* Mac OS X and iOS */
