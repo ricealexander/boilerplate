@@ -1,29 +1,38 @@
-/** RESTART.CSS
-  * an opinionated css reset
-  **/
-
-/* SYSTEM FONT STACK
-   system font stack defaults to system's native UI font
-
-  system-ui,            ** detect system font automatically
-  -apple-system,        ** Safari (Mac OS X and iOS) and Older Mac OS X
-  BlinkMacSystemFont,   ** Chrome<56 (Mac OS X)
-  "Segoe UI",           ** Windows and Windows Phone
-  "Roboto",             ** Android and Chrome OS
-  "Oxygen",             ** KDE    - Linux environment
-  "Ubuntu",             ** Ubuntu - Linux distribution
-  "Cantarell",          ** GNOME  - Linux environment
-  "Fira Sans",          ** Firefox
-  "Droid Sans",         ** Older Android
-  "Helvetica Neue",     ** Older Mac OS X
-  sans-serif,
-  "Apple Color Emoji",                  ** Mac OS X Emoji fallback
-  "Segoe UI Emoji", "Segoe UI Symbol";  ** Windows Emoji fallback
+/* SYSTEM FONTS
+   system font stacks default to system's native fonts
+   this results in quick and pretty defaults.
 */
+
+:root {
+  --f-system-sans:
+    system-ui,              /* detect system font automatically */
+    -apple-system,          /* Safari (Mac OS X and iOS) and Older Mac OS X */
+    BlinkMacSystemFont,     /* Chrome<56 (Mac OS X) */
+    "Segoe UI",             /* Windows and Windows Phone */
+    "Roboto",               /* Android and Chrome OS */
+    "Oxygen",               /* KDE    - Linux environment */
+    "Ubuntu",               /* Ubuntu - Linux distribution */
+    "Cantarell",            /* GNOME  - Linux environment */
+    "Fira Sans",            /* Firefox */
+    "Droid Sans",           /* Older Android */
+    "Helvetica Neue",       /* Older Mac OS X */
+    sans-serif,
+    "Apple Color Emoji",                  /* Mac OS X Emoji fallback */
+    "Segoe UI Emoji", "Segoe UI Symbol";  /* Windows Emoji fallback */
+
+  --f-system-mono:
+    SFMono-Regular,         /* Mac OS X and iOS */
+    Menlo,                  /* Older Mac OS X */
+    Monaco,                 /* Older Mac OS X */
+    Consolas,               /* Windows */
+    "Liberation Mono",      /* Older Windows */
+    "Courier New", Courier, /* Older Windows */
+    monospace;
+}
 
 body {
   background-color: #fff;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";  /* system font stack (Reboot*) */
+  font-family: var(--f-system-sans);
   font-size: 1rem; /* user-defined font-size || browser default (Reboot) */
   margin: 0; /* override default margin */
   height: 100vh; /* body should match height of the viewport */
@@ -40,15 +49,34 @@ main {
 /* RESTYLE COMPONENTS
    avoid collapsing margins by setting all margins as margin-bottom
    font-sizes should not be less than 1rem;
+
+   A Visual Type Scale: http://type-scale.com/
+   Scale: 1.200 - Minor Third
 */
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-weight: normal;
+  font-weight: 400;
 }
 
-h4, h5, h6 {
+h1 {
+  font-size: 2.074rem;
+}
+
+h2 {
+  font-size: 1.728rem;
+}
+
+h3 {
+  font-size: 1.44rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+h5, h6 {
   font-size: 1rem;
 }
 
@@ -88,4 +116,8 @@ td {
 pre {
   margin-top: 0;
   margin-bottom: 1rem;
+}
+
+code, pre {
+  font-family: var(--f-system-mono);
 }
