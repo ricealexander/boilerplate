@@ -5,39 +5,67 @@
 .bold
   font-weight: 600
 
-.upper
+b-XXX()
+  for --weight in arguments
+    .b-{--weight}
+      font-weight: --weight
+
+b-XXX(100,200,300,400,500,600,700,800,900)
+
+.no-bold
+  font-weight: normal
+
+.case-upper
   text-transform: uppercase
 
-.lower
+.case-lower
   text-transform: lowercase
+
+.case-caps
+  text-transform: capitalize
+
+.no-case
+  text-transform: none
 
 .underline
   text-decoration: underline
 
-
 // Heading Utility Classes ===============================================
 // underline effect after header
 
-underline-heading()
-  for hx in arguments
-    {hx}.underline-side
-      overflow: hidden
-      margin-bottom: 0.25em  // margin and padding emulate a margin-bottom: 0.5em
-      padding-bottom: 0.25em // when overflow-x is hidden, descenders get clipped
-      text-decoration: none
-    {hx}.underline-side::after
-      content: ''
-      background-color: black
-      width: 100%
-      margin-right: -50%
-      height: 0.075em
-      display: inline-block
-      margin-left: .5em
-    {hx}.underline-side.bold::after
-      height: 0.125em
+.underline-side
+  overflow: hidden
+  margin-bottom: 0.25em  // margin and padding emulate a margin-bottom: 0.5em
+  padding-bottom: 0.25em // when overflow-x is hidden, descenders get clipped
+  text-decoration: none
 
-underline-heading(h1,h2,h3,h4,h5,h6)
+.underline-side::after
+  content: ''
+  background-color: black
+  width: 100%
+  margin-right: -100%
+  height: 0.075em
+  display: inline-block
+  margin-left: .5em
 
+.underline-side.bold::after
+  height: 0.125em
+
+underline-b-XXX()
+  for --weight in arguments
+    .underline-side.b-{--weight}::after
+      height: (0.017 + (--weight/100) * 0.018em)
+// 100 weight -> 0.035em
+// 600 weight -> 0.125em
+// em = (0.017 + (weight / 100) * 0.018em)
+
+underline-b-XXX(100,200,300,400,500,600,700,800,900)
+
+@media (max-width: 600px)
+  .underline-side::after
+    display: block
+    margin-left: 0
+    margin-top: 0.5rem
 
 // Horizontal List
 ul.list-horiz
