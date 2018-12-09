@@ -1,0 +1,66 @@
+// monospace System Font
+--system-monospace = SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Courier, monospace
+
+// Standard Utility Classes ==============================================
+.bold
+  font-weight: 600
+
+.upper
+  text-transform: uppercase
+
+.lower
+  text-transform: lowercase
+
+.underline
+  text-decoration: underline
+
+
+// Heading Utility Classes ===============================================
+// underline effect after header
+
+underline-heading()
+  for hx in arguments
+    {hx}.underline-side
+      overflow: hidden
+      margin-bottom: 0.25em  // margin and padding emulate a margin-bottom: 0.5em
+      padding-bottom: 0.25em // when overflow-x is hidden, descenders get clipped
+      text-decoration: none
+    {hx}.underline-side::after
+      content: ''
+      background-color: black
+      width: 100%
+      margin-right: -50%
+      height: 0.075em
+      display: inline-block
+      margin-left: .5em
+    {hx}.underline-side.bold::after
+      height: 0.125em
+
+underline-heading(h1,h2,h3,h4,h5,h6)
+
+
+// Horizontal List
+ul.list-horiz
+  padding-left: 0
+  list-style-type: none
+
+ul.list-horiz > li
+  display: inline-block
+
+
+// Code background
+.code
+  font-family: --system-monospace
+  font-size: 1em
+
+code.code
+  background-color: #f9f9f9
+  border: 1px solid #d6d6d6
+  padding: 0 .25em
+
+pre.code
+  background-color: #f9f9f9
+  border: 1px solid #d6d6d6
+  font-size: 1rem
+  font-weight: 300
+  padding: 1rem
