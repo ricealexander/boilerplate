@@ -40,9 +40,9 @@
 --typesize-3 = 1.440rem
 --typesize-4 = 1.200rem
 --typesize-5 = 1.000rem
---typesize-6 = 0.833rem
---typesize-7 = 0.694rem
---typesize-8 = 0.579rem
+--typesize-6 = 0.833em
+--typesize-7 = 0.694em
+--typesize-8 = 0.579em
 
 body
   background-color: #fff
@@ -94,10 +94,10 @@ ul
   padding-left: 2rem
 
 ul ul
-  margin-bottom: 0
+  margin-bottom: 0 // no margin for nested lists
 
 dt
-  font-weight: 700
+  font-weight: 700 // definition titles are bold
 
 dd
   margin-left: 0
@@ -118,5 +118,23 @@ pre
   margin-top: 0
   margin-bottom: 1rem
 
-code, pre
+code, pre, kbd, samp
   font-family: --system-monospace
+  font-size: 1rem
+
+// Add the correct font size in all browsers. NORMALIZE
+small
+  font-size: --typesize-6
+
+// Prevent `sub` and `sup` from affecting line height. NORMALIZE
+sub, sup
+  font-size: --typesize-7
+  line-height: 0
+  position: relative
+  vertical-align: baseline
+
+sub
+  bottom: -0.25em
+
+sup
+  top: -0.5em
