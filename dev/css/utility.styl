@@ -1,3 +1,7 @@
+@font-face
+  font-family: 'custom_icons'
+  src: url('../custom_icons.woff2') format('woff2'), url('../custom_icons.woff') format('woff')
+
 // monospace System Font
 --system-monospace = SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Courier, monospace
 
@@ -30,7 +34,7 @@ b-XXX(100,200,300,400,500,600,700,800,900)
 .underline
   text-decoration: underline
 
-// Heading Utility Classes ===============================================
+// .underline-side | Utility Class =======================================
 // underline effect after header
 
 .underline-side
@@ -42,19 +46,20 @@ b-XXX(100,200,300,400,500,600,700,800,900)
 .underline-side::after
   content: ''
   background-color: black
+  border-bottom: 0.125em solid // default to b-600
   width: 100%
   margin-right: -100%
-  height: 0.075em
   display: inline-block
   margin-left: .5em
 
 .underline-side.bold::after
-  height: 0.125em
+  border-width: 0.125em
 
 underline-b-XXX()
   for --weight in arguments
+    width = (0.017 + (--weight/100) * 0.018em)
     .underline-side.b-{--weight}::after
-      height: (0.017 + (--weight/100) * 0.018em)
+      border-width: round(width,3)
 // 100 weight -> 0.035em
 // 600 weight -> 0.125em
 // em = (0.017 + (weight / 100) * 0.018em)
@@ -66,15 +71,6 @@ underline-b-XXX(100,200,300,400,500,600,700,800,900)
     display: block
     margin-left: 0
     margin-top: 0.5rem
-
-// Horizontal List
-ul.list-horiz
-  padding-left: 0
-  list-style-type: none
-
-ul.list-horiz > li
-  display: inline-block
-
 
 // Code background
 .code
@@ -92,3 +88,51 @@ pre.code
   font-size: 1rem
   font-weight: 300
   padding: 1rem
+
+// Horizontal List
+ul.list-horiz
+ul.breadcrumbs
+ul.breadcrumbs-angle
+  padding-left: 0
+  list-style-type: none
+
+ul.list-horiz > li
+ul.list-horiz > a > li
+  display: inline-block
+
+// Breadcrumbs
+// icon font built with: https://icomoon.io/app/
+// woff2 converted by: https://everythingfonts.com/woff-to-woff2
+
+.breadcrumbs > li:not(:first-child)
+.breadcrumbs-angle > li:not(:first-child)
+  padding-left: 1.5em
+  position: relative
+  line-height: 1
+
+.breadcrumbs > li:not(:first-child)::before
+.breadcrumbs-angle > li:not(:first-child)::before
+  font-family: custom_icons
+  font-style: normal
+  font-weight: 300
+  position: absolute
+  top: 0.25em
+  left: 0.5em
+  font-size: 0.75em
+
+.breadcrumbs > li:not(:first-child)::before
+  content: "/"
+
+.breadcrumbs-angle > li:not(:first-child)::before
+  content: ">"
+
+.icon
+  font-family: custom_icons
+  font-style: normal
+  font-weight: 300
+
+.icon-rt-angle::before
+  content: ">"
+
+.icon-fw-slash::before
+  content: "/"
